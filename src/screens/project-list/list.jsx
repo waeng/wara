@@ -3,8 +3,7 @@ import React from 'react';
 export const List = ({list, users}) => {
     return <table>
         <thead>
-            <tr><td>名称</td></tr>
-            <tr><td>负责人</td></tr>
+            <tr><td>名称</td><td>负责人</td></tr>
         </thead>
         <tbody>
             {

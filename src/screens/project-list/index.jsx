@@ -10,14 +10,14 @@ export const ProjectListScreen = () => {
 
     const [param, setParam] = useState({
         name: '',
-        personId: 0
+        personId: ''
     })
 
     const [users, setUsers] = useState([])
     const [list, setList] = useState([])
 
     useEffect(() => {
-        fetch(`${apiUrl}/projects?${qs.stringify(cleanObject(param))}}`).then(async response => {
+        fetch(`${apiUrl}/projects?${qs.stringify(cleanObject(param))}`).then(async response => {
             if (response.ok) {
                 setList(await response.json())
             }
